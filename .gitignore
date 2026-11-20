@@ -1,0 +1,50 @@
+# --- secrets & local state (never commit) ---
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.enc
+*.cksum
+*.entries
+*.err
+# State dirs normally live in $HOME (~/.<tool>/); if you keep one in the repo, ignore it:
+# .<tool>/
+
+# --- logs & runtime ---
+*.log
+nohup.out
+*.pid
+*.tmp
+*.bak
+
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/settings.json
+*.swp
+*~
+
+# --- language caches ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ruff_cache/
+.mypy_cache/
+.pytest_cache/
+node_modules/
+npm-debug.log*
+dist/
+build/
+*.egg-info/
+
+# --- mixlarchive recordings ---
+recordings/
+*.mp3
+*.aac
+*.m4a
+*.ogg

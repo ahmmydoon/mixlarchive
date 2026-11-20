@@ -1,0 +1,33 @@
+# Let git detect text files, normalize to LF in the repo
+* text=auto
+
+# Scripts: the shebang line breaks with CRLF, so force LF on every OS
+*.sh   text eol=lf
+*.bash text eol=lf
+*.zsh  text eol=lf
+*.py   text eol=lf
+*.js   text eol=lf
+*.rb   text eol=lf
+*.pl   text eol=lf
+
+# Windows scripts: CRLF (LF-only .bat files can break goto/call labels)
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# Docs and config
+*.md   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+
+# Binary
+*.png  binary
+*.jpg  binary
+*.gif  binary
+*.enc  binary
+
+# Keep archives clean
+.gitattributes export-ignore
+.gitignore     export-ignore
+.github/       export-ignore
